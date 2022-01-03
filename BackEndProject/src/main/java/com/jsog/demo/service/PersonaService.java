@@ -38,9 +38,9 @@ public class PersonaService implements IPersonaService {
 	}
 
 	@Override
-	public int save(Persona p) {
+	public Persona save(Persona p) {
 		// TODO Auto-generated method stub
-		return 0;
+		return data.save(p);
 	}
 
 }
