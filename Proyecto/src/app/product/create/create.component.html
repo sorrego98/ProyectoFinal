@@ -1,0 +1,50 @@
+<mat-card>
+    <mat-card-title>Create Product</mat-card-title>
+    <mat-card-content>
+      <form [formGroup]="form" (ngSubmit)="submit()">
+        <p>
+          <mat-form-field>
+            <input type="text" matInput placeholder="Tipo de Cuenta" formControlName="typeaccount">
+          </mat-form-field>
+        </p>
+  
+        <p>
+          <mat-form-field>
+            <input type="number" matInput placeholder="Nro. de cuenta" formControlName="numberaccount">
+          </mat-form-field>
+        </p>
+  
+        <p>
+          <mat-form-field>
+            <input type="date" matInput placeholder="Fecha apertura" formControlName="dateopen">
+          </mat-form-field>
+        </p>
+
+        <p>
+            <mat-form-field>
+              <input type="number" matInput placeholder="Saldo" formControlName="money">
+            </mat-form-field>
+          </p>
+
+  
+        <p class="error" *ngIf="form.get('typeaccount')?.invalid && form.get('typeaccount')?.touched">
+          Usuario es requerido
+        </p>
+        <p class="error" *ngIf="form.get('numberaccount')?.invalid && form.get('numberaccount')?.touched">
+          Contraseña es requerida
+        </p>
+        <p class="error" *ngIf="form.get('dateopen')?.invalid && form.get('dateopen')?.touched">
+            Usuario es requerido
+          </p>
+          <p class="error" *ngIf="form.get('money')?.invalid && form.get('money')?.touched">
+            Contraseña es requerida
+          </p>
+  
+        <div class="button">
+          <button type="submit" mat-button>Create</button>
+        </div>
+  
+      </form>
+    </mat-card-content>
+  </mat-card>
+  

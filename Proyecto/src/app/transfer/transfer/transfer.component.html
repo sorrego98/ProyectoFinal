@@ -1,0 +1,51 @@
+<mat-card>
+    <mat-card-title>Transfer</mat-card-title>
+    <mat-card-content>
+      <form [formGroup]="form" (ngSubmit)="submit()">
+        <p>
+          <mat-form-field>
+            <input type="text" matInput placeholder="Tipo de Transferencia" formControlName="typetransfer">
+          </mat-form-field>
+        </p>
+  
+        <p>
+          <mat-form-field>
+            <input type="number" matInput placeholder="Cuenta de envio" formControlName="sendaccount">
+          </mat-form-field>
+        </p>
+
+        <p>
+            <mat-form-field>
+              <input type="number" matInput placeholder="cuenta de recibo" formControlName="getaccount">
+            </mat-form-field>
+          </p>
+  
+
+        <p>
+            <mat-form-field>
+              <input type="number" matInput placeholder="Cantidad" formControlName="money">
+            </mat-form-field>
+          </p>
+
+  
+        <p class="error" *ngIf="form.get('typetransfer')?.invalid && form.get('typetransfer')?.touched">
+          Usuario es requerido
+        </p>
+        <p class="error" *ngIf="form.get('sendaccount')?.invalid && form.get('sendaccount')?.touched">
+          Contraseña es requerida
+        </p>
+        <p class="error" *ngIf="form.get('getaccount')?.invalid && form.get('getaccount')?.touched">
+            Usuario es requerido
+          </p>
+          <p class="error" *ngIf="form.get('money')?.invalid && form.get('money')?.touched">
+            Contraseña es requerida
+          </p>
+  
+        <div class="button">
+          <button type="submit" mat-button>Transfer</button>
+        </div>
+  
+      </form>
+    </mat-card-content>
+  </mat-card>
+  
