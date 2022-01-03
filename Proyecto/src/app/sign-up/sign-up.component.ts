@@ -13,7 +13,7 @@ export class SignUpComponent implements OnInit {
 
   constructor() {
     this.form = new FormGroup({
-      email: new FormControl('', Validators.email ),
+      email: new FormControl('', [Validators.email, Validators.required] ),
       username: new FormControl('', Validators.required ),
       password: new FormControl('', Validators.required )
     });
