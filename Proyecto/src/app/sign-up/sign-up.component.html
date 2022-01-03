@@ -10,21 +10,12 @@
   
         <p>
           <mat-form-field>
-            <input type="text" matInput placeholder="Username" formControlName="username">
-          </mat-form-field>
-        </p>
-  
-        <p>
-          <mat-form-field>
             <input type="password" matInput placeholder="Password" formControlName="password">
           </mat-form-field>
         </p>
 
         <p class="error" *ngIf="form.get('email')?.invalid && form.get('email')?.touched">
           Email es requerido
-        </p>
-        <p class="error" *ngIf="form.get('username')?.invalid && form.get('username')?.touched">
-          Usuario es requerido
         </p>
         <p class="error" *ngIf="form.get('password')?.invalid && form.get('password')?.touched">
           Contraseña es requerida

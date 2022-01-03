@@ -22,6 +22,10 @@ const routes: Routes = [
   {
     path: 'transfer',
     loadChildren: () => import('./transfer/transfer.module').then(m => m.TransferModule)
+  },
+  {
+    path: 'createaccount',
+    loadChildren: () => import('./create-account/create-account.module').then(m => m.CreateAccountModule)
   }
 ];
 

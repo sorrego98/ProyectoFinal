@@ -4,7 +4,7 @@
       <form [formGroup]="form" (ngSubmit)="submit()">
         <p>
           <mat-form-field>
-            <input type="text" matInput placeholder="Username" formControlName="username">
+            <input type="email" matInput placeholder="Correo" formControlName="email">
           </mat-form-field>
         </p>
   
@@ -14,7 +14,7 @@
           </mat-form-field>
         </p>
   
-        <p class="error" *ngIf="form.get('username')?.invalid && form.get('username')?.touched">
+        <p class="error" *ngIf="form.get('email')?.invalid && form.get('email')?.touched">
           Usuario es requerido
         </p>
         <p class="error" *ngIf="form.get('password')?.invalid && form.get('password')?.touched">
